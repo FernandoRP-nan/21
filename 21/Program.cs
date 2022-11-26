@@ -60,7 +60,10 @@ do
 
     comprobarSiSePasoElJugador();
     if (fin)
+    {
+        volverAJugar();
         break;
+    }
 
     Console.ReadLine();
 
@@ -215,9 +218,13 @@ do
 
 
 
+    volverAJugar();
 
 
-    System.Console.WriteLine("¿Desea volver a jugar? \n1)Si \n2)No");
-    decisionJ = (Console.ReadLine() == "1");
 } while (decisionJ);
 
+void volverAJugar()
+{
+    System.Console.WriteLine("¿Desea volver a jugar? \n1)Si \n2)No");
+    decisionJ = (Console.ReadLine() == "1");
+}
